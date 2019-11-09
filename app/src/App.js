@@ -1,24 +1,29 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Input} from 'semantic-ui-react';
+
+import {useState} from 'reinspect';
 
 function App() {
+  const[inputVal, setInputVal] = useState('');
+
+
+  const handleInput = (e) => {
+    const {value} = e.target
+    setInputVal(value);
+    console.log('inputVal is ', inputVal);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Input
+        value = {inputVal}
+        onChange = {handleInput}
+      
+      />
+
+      <p>{inputVal}</p>
     </div>
   );
 }
