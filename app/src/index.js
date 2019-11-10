@@ -6,13 +6,16 @@ import './index.css';
 import App from './App';
 import CounterUseState from './CounterUseState';
 import InputHooks from './InputHooks';
+import CounterUseReducer from './CounterUseReducer';
 import * as serviceWorker from './serviceWorker';
 
 function WrappedState () {
    return(
        <StateInspector>
+           <InputHooks />
            <App/>
            <CounterUseState/>
+           <CounterUseReducer />
        </StateInspector>
     )
 }
