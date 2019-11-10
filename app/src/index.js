@@ -4,12 +4,15 @@ import {StateInspector} from 'reinspect';
 
 import './index.css';
 import App from './App';
+import CounterUseState from './CounterUseState';
+import InputHooks from './InputHooks';
 import * as serviceWorker from './serviceWorker';
 
 function WrappedState () {
    return(
        <StateInspector>
            <App/>
+           <CounterUseState/>
        </StateInspector>
     )
 }

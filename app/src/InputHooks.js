@@ -5,12 +5,11 @@ import {Input, Form, Button} from 'semantic-ui-react';
 
 import {useState} from "reinspect";
 
-function App() {
-  const[inputVal, setInputVal] = useState('', "Input_State");
-  const [todos, setTodos] = useState([], "Todo_State");
+//   const [sum1, setSum1] = useState(100, "Sum1State");
 
-  // const[inputVal, setInputVal] = useState('', 1);
-  // const [todos, setTodos] = useState([], 2);
+function InputHooks() {
+  const[inputVal, setInputVal] = useState('', "InputState");
+  const [todos, setTodos] = useState([], "TodosState");
 
   const handleInput = (e) => {
     const {value} = e.target
@@ -48,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default InputHooks;
